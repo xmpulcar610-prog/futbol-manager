@@ -2,13 +2,12 @@ import { initializeApp } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC3k8nwayDXYs2lWQuvIr09vlDHcS4QKQs",
-  authDomain: "futbol-manager-38ab6.firebaseapp.com",
-  projectId: "futbol-manager-38ab6",
-  storageBucket: "futbol-manager-38ab6.firebasestorage.app",
-  messagingSenderId: "724733665340",
-  appId: "1:724733665340:web:8dd0ab8843a8cd3187e339",
-  measurementId: "G-XR668TD80L"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 }
 
 const app = initializeApp(firebaseConfig)
